@@ -1,17 +1,37 @@
-import { Stack } from 'expo-router'
-import React from 'react'
+import {Stack} from "expo-router"
+import tw from "twrnc"
 
-const _layout = () => {
-  return (
-    <Stack>
-        <Stack.Screen
-            name='(tabs)'
-            options={{
-                headerShown: false,
-            }}
-        />
-    </Stack>
-  )
+const RootLayout = () =>{
+    return(
+        <Stack>
+            <Stack.Screen 
+                name="index"
+                options={{
+                    headerShown: false
+                }}
+            />
+
+            <Stack.Screen 
+                name="skeet"
+                options={{
+                    headerShown: false,
+                }}
+            />
+
+            <Stack.Screen 
+                name="[id]"
+                options={{
+                    headerTitle: "Information",
+                    headerStyle: {
+                        backgroundColor: "#3E567C",
+                    },
+                    headerTintColor: "white",
+                    headerTitleAlign:"center",
+                    
+                }}
+            />
+        </Stack>
+    )
 }
 
-export default _layout
+export default RootLayout
