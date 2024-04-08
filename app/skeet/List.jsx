@@ -57,11 +57,17 @@ const List = () => {
           <TextInput
             style={tw`border py-0 px-[5px] w-[50px] ml-[10px]`}
             placeholder='Min..'
+            onChangeText={(text) => {
+              setLowerPrice(text)
+            }}
           />
           <Text>Max Price $</Text>
           <TextInput
             style={tw`border py-0 px-[5px] w-[50px] ml-[10px]`}
             placeholder='Max..'
+            onChangeText={(text) => {
+              setUpperPrice(text)
+            }}
           />
 
         </View>
@@ -71,11 +77,12 @@ const List = () => {
       <Button
         title='Search'
         onPress={() => {
+          console.log()
           setLoading(true)
         }}
       />
 
-      <ScrollView style={tw`flex bg-sky-950 text-white`}>
+      <ScrollView style={tw`flex bg-sky-950 text-white min-h-full`}>
         {isLoading ?
           <View style={tw`flex-1 self-center mt-[250px]`}>
             <Text> Loading...... </Text>
@@ -83,27 +90,39 @@ const List = () => {
           </View>
           :
           <>
+            <Text style={tw`text-white`}>Search resutls for "{title}" bewteen "${lowerPrice}" and "${upperPrice}"</Text>
             {listInformation.length != 0 ?
               (listInformation.map((item) => (
                 <TouchableOpacity onPress={() => {
                   router.push(`../${item.gameID}`)
                 }}
                   key={item.steamAppID}
-                  style={tw``}
+                  style={tw`mt-10`}
                 >
-                  <View style={tw`flex-row justify-between`}>
-                    <Text style={tw`w-62 text-white`}>{item.title}</Text>
+                  <View style={tw`flex-row mt-[-5px] h-auto justify-between`}>
+                    <Text style={tw`w-62 text-white text-5`}>{item.title}</Text>
                     <Image
                       source={{ uri: (item.thumb) }}
                       style={tw`h-15 w-40`}
                     />
                   </View>
-                  <Text style={tw`text-white`}>
-                    {item.normalPrice}
-                  </Text>
-                  <Text style={tw`text-white`}>
-                    {item.salePrice}
-                  </Text>
+                  <View style={tw`flex-row gap-6 mt-[-10px] bg-sky-950 w-18%`}>
+                    <Text style={tw`text-white text-decoration-line: line-through`}>
+                      ${item.normalPrice}nzd
+                    </Text>
+
+                  </View>
+                  <View style={tw`flex-row gap-3  bg-sky-700 w-18%`}>
+                    <Text style={tw`text-white self-center`}>
+                      ${item.salePrice}nzd
+                    </Text>
+                    <View style={tw`bg-lime-500 `}>
+                      <Text>
+                        {Number((1 - (item.salePrice / item.normalPrice)) * 100).toFixed(0)}%
+                      </Text>
+                    </View>
+                  </View>
+
                 </TouchableOpacity>
 
               )))

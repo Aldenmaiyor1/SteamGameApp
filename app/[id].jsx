@@ -82,7 +82,7 @@ const id = () => {
     return (
         <SafeAreaView style={tw`flex-1 bg-sky-900 h-100 mt-0`}>
             <SafeAreaView style={tw`mt-0`}>
-                <Text style={tw`text-white text-7 border`}>
+                <Text style={tw`text-white text-7`}>
                     {gameInformation?.info?.title}
                 </Text>
             </SafeAreaView>

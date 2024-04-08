@@ -1,6 +1,7 @@
 import { Link, router } from 'expo-router'
 import React from 'react'
-import { Button, Text, View } from 'react-native'
+import { Button, Image, Text, View } from 'react-native'
+import CodingPepe from "../assets/Coding-pepe.gif"
 import tw from "twrnc"
 
 const index = () => {
@@ -12,6 +13,10 @@ const index = () => {
                 <Text style={tw`text-white px-5`}>SteamSaver is an app that helps you find deals for your favourite games on steam, it also generates memes for some reason :D</Text>
 
             </View>
+            <Image
+                source={CodingPepe}
+                style={tw`h-70 w-70 self-center mt-[-180px] mb-[20px]`}
+            />
             <View style={tw`self-center flex gap-10 w-48 `}>
                 <Button
                     onPress={() => router.push("skeet/List")}

@@ -1,18 +1,25 @@
 import {Stack, Tabs} from "expo-router"
 import { Image } from "react-native"
 import SteamIcon from "../../assets/SteamIcon.jpg"
+import SteamIconBackgroundless from "../../assets/steam-icon-backgroundless.jpg"
+import SteamIconSq from "../../assets/SteamIconSq.jpg"
 import Pepe from "../../assets/Clown-pepe.gif"
 
 const RootLayout = () =>{
     return(
         <Tabs screenOptions={{
+            tabBarInactiveTintColor:"white",
+            tabBarActiveTintColor: "white",
             tabBarStyle: {
-                backgroundColor: "#000"
+                backgroundColor: "#3E567C",
+                borderTopWidth: 0,
+                
             }
         }}>
             <Tabs.Screen 
                 name="List"
                 options={{
+                    tabBarActiveBackgroundColor: "grey",
                     headerStyle: {
                         backgroundColor: "#3E567C",
                     },
@@ -21,8 +28,9 @@ const RootLayout = () =>{
                     tabBarIcon: ()=>{
                         return (
                             <Image
-                                style = {{width:20, height: 20}}
-                                source={SteamIcon}
+                                style = {{width:38, height: 35}}
+                                source={SteamIconBackgroundless}
+                                backgroundColor = "grey"
                             />
                         )
                     }
@@ -37,11 +45,11 @@ const RootLayout = () =>{
                     },
                     headerTitleAlign: "center",
                     headerTintColor: "white",
-                    tabBarActiveBackgroundColor:"black",
+                    tabBarActiveBackgroundColor:"grey",
                     tabBarIcon: ()=>{
                         return (
                             <Image
-                                style = {{width:40, height: 38, }}
+                                style = {{width:38, height: 35}}
                                 source={Pepe}
                             />
                         )
