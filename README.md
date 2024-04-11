@@ -4,4 +4,5 @@
   <li>Installation Guide</li>
   <li>React Native routing using expo router</li>
   <li>Features of App</li>
+  <li>Styling using twrnc</li>
 </ol>
