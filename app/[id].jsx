@@ -1,10 +1,11 @@
-import { Dimensions, FlatList, Image, ScrollView, Text, View, Linking, TouchableOpacity} from "react-native"
+import { Dimensions, FlatList, Image, ScrollView, Text, View, Linking, TouchableOpacity } from "react-native"
 import { useLocalSearchParams } from "expo-router"
 import { useEffect, useState } from "react";
 import tw from "twrnc"
 import Swiper from "react-native-swiper";
 import Carousel from 'react-native-snap-carousel';
 import { SafeAreaView } from "react-native-safe-area-context";
+
 
 const id = () => {
 
@@ -72,7 +73,7 @@ const id = () => {
         );
     };
 
-    const openMetacritic = () =>{
+    const openMetacritic = () => {
         const url = aboutTheGame?.metacritic?.url;
         Linking.openURL(url)
     }
@@ -137,8 +138,8 @@ const id = () => {
             </View>
 
             <Text style={tw`text-white text-5 ml-5`}>Metacritic Score (click to open metacritic)</Text>
-            <TouchableOpacity 
-                onPress={()=>{
+            <TouchableOpacity
+                onPress={() => {
                     openMetacritic()
                 }}
                 style={tw`bg-sky-700 mx-5 p-2 rounded-lg`}>
