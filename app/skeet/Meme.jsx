@@ -7,19 +7,22 @@ const index = () => {
 
     const [meme, setMeme] = useState()
     const [isLoading, setLoading] = useState(false)
+    const [NewMeme, setNewMeme] = useState(true)
 
     useEffect(() => {
         fetch(`https://meme-api.com/gimme`)
             .then((resp) => resp.json())
             .then((json) => setMeme(json))
             .catch((error) => console.error(error))
-            .finally(() => setLoading(false)
+            .finally(() => {
+                setLoading(false)
+            }
             );
-    }, [isLoading])
+    }, [NewMeme])
     return (
         <View style={tw` flex-1 bg-sky-900`}>
 
-            <Text style={tw`text-white text-7`}>A meme a day keeps the doctor away</Text>
+            <Text style={tw`text-white text-7`}>Problem retriving the meme from api</Text>
             {meme?.nsfw == false ?
                 <Image
                     source={{ uri: (meme?.url) }}
@@ -31,7 +34,8 @@ const index = () => {
             <Button
                 title='Get new meme'
                 onPress={() =>
-                    setLoading(true)}></Button>
+                    setNewMeme(!NewMeme)
+                    }></Button>
         </View>
     )
 }

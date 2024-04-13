@@ -2,9 +2,6 @@ import { Dimensions, FlatList, Image, ScrollView, Text, View, Linking, Touchable
 import { useLocalSearchParams } from "expo-router"
 import { useEffect, useState } from "react";
 import tw from "twrnc"
-import Swiper from "react-native-swiper";
-import Carousel from 'react-native-snap-carousel';
-import { SafeAreaView } from "react-native-safe-area-context";
 
 
 const id = () => {
@@ -49,12 +46,8 @@ const id = () => {
             for (const k in steamInfo) {
                 key = k
             }
-            // console.log(steamInfo[key].data.screenshots)
-            // console.log(steamInfo.steamInfo[key].data.screenshots)
-            // console.log(steamInfo[key].data)
             setScreenshots(steamInfo[key].data.screenshots)
             setAboutTheGame(steamInfo[key].data)
-            console.log(steamInfo[key])
         }
     }, [steamInfo])
 
@@ -67,7 +60,7 @@ const id = () => {
 
     const renderItem = ({ item }) => {
         return (
-            <View key={item.path_full} style={tw`h-60 w-100`}>
+            <View key={item.path_full} style={tw`h-60 w-100 self-center mr-[12px]`}>
                 <Image source={{ uri: item.path_full }} style={tw`h-50 w-100`} />
             </View>
         );
@@ -81,32 +74,34 @@ const id = () => {
     const screenWidth = Dimensions.get('window').width;
 
     return (
-        <SafeAreaView style={tw`flex-1 bg-sky-900 h-100 mt-0`}>
-            <SafeAreaView style={tw`mt-0`}>
+        <View style={tw`flex-1 bg-sky-900 h-100 mt-0`}>
+            <View style={tw`mt-0`}>
                 <Text style={tw`text-white text-7`}>
                     {gameInformation?.info?.title}
                 </Text>
-            </SafeAreaView>
+            </View>
+
+            {/* Scroll View, Not very performant */}
             {/* <View>
-             <Text>hihi</Text>
-             <ScrollView horizontal={true}>
-                 {screenshots ?
+                <ScrollView horizontal={true}>
+                    {screenshots ?
 
-                    (screenshots.map((item) => (
-                        <Image
-                            source={{ uri: (item.path_full) }}
-                            style={tw`h-50 w-100 flex-1 self-center`}
-                        />
-                    )))
+                        (screenshots.map((item) => (
+                            <Image
+                                source={{ uri: (item.path_full) }}
+                                style={tw`h-50 w-100 flex-1 self-center`}
+                            />
+                        )))
 
-                    :
-                    <Text>nothing</Text>}
-            </ScrollView>
-        </View>
+                        :
+                        <Text>nothing</Text>}
+                </ScrollView>
+            </View>
 
+ */}
 
-        <View style={tw`w-[${screenWidth}dp]`}>
-            <Text>hihi</Text>
+            {/* FlatList, better performance, allows defining of a snapping function */}
+            <View style={tw`w-[${screenWidth}dp]`}>
             {screenshots ? (
                 <FlatList
                     horizontal={true}
@@ -121,17 +116,8 @@ const id = () => {
             ) : (
                 <Text>No screenshots found</Text>
             )}
-        </View> */}
+        </View> 
 
-            <View style={tw`justify-center w-100`}>
-                <Carousel
-                    data={screenshots}
-                    renderItem={renderItem}
-                    sliderWidth={screenWidth}
-                    itemWidth={screenWidth}
-                    layout={'default'}
-                />
-            </View>
             <Text style={tw`text-white text-5 ml-5`}>About</Text>
             <View style={tw`bg-sky-700 mx-5 p-2 rounded-lg`}>
                 <Text style={tw`text-white `}>{aboutTheGame?.short_description}</Text>
@@ -146,7 +132,7 @@ const id = () => {
                 <Text style={tw`text-white `}>{aboutTheGame?.metacritic?.score}/100</Text>
                 <Text style={tw`text-white `}>{aboutTheGame?.metacritic?.url}</Text>
             </TouchableOpacity>
-        </SafeAreaView>
+        </View>
     )
 }
 

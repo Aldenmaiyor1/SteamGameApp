@@ -20,6 +20,8 @@ const index = () => {
                 source={CodingPepe}
                 style={tw`h-70 w-70 self-center mt-[-180px] mb-[20px]`}
             />
+
+
             <View style={tw`self-center flex gap-6 w-48 `}>
                 <Button
                     onPress={() => router.push("skeet/List")}

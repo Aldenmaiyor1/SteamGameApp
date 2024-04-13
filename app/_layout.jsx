@@ -14,7 +14,13 @@ const RootLayout = () =>{
             <Stack.Screen 
                 name="skeet"
                 options={{
-                    headerShown: false,
+                    headerShown: true,
+                    headerTitle: "Back",
+                    headerStyle: {
+                        backgroundColor: "#3E567C",
+                    },
+                    headerTintColor: "white",
+                    headerTitleAlign:"left",
                 }}
             />
 
