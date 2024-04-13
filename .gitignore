@@ -15,7 +15,7 @@ web-build/
 *.p12
 *.key
 *.mobileprovision
-%ProgramData%
+%ProgramData%/Microsoft/Windows/UUS/State
 
 # Metro
 .metro-health-check*
