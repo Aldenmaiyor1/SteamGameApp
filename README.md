@@ -1,6 +1,7 @@
 # React Native Steam Game Discount Finder App
 
-This React Native application serves as a Steam game discount finder, utilizing APIs from Steam Community and CheapShark to retrieve deal and game information. The app allows users to search for specific games on sale and set price ranges for their searches.
+React native is an open source framework for building Native Applications. React native is based on React and uses similar tools as react such as hooks and components, but while React is for web, React native is for websites. While React uses HTML, CSS and Javascript to create interactive user interfaces, React Native uses native UI components and API for mobile apps. This means that your apps will utilize the platform’s (IOS or Android) build-in UI elements and its cross-platform development capabilities, reducing development time and costs and developers only have to develop one app for both platforms. I created this app using expo, which is a platform for react native that simplifies the creation of the app and the routing. It is similar to vite
+This demonstration will focus on creating a Steam game discount finder app for android using react native. This app will use API’s from [Steam](https://steamcommunity.com/dev) and [CheapShark](https://apidocs.cheapshark.com) to retrieve deal information and game information. It also allows you to search for specific games if they are on sale and set the price range for your search. 
 
 ## Installation Guide
 
@@ -8,7 +9,10 @@ This React Native application serves as a Steam game discount finder, utilizing 
 
 To create a React Native application using Expo, follow these steps:
 
-1. Run the following command:2. Choose a template and name for your app.
+1. Run the following command:
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/bc75b8ed-b7bd-4363-9ce4-af8336d63157)
+
+2. 2. Choose a template and name for your app.
 3. Start your app using the provided commands.
 
 ### Installing Simulators
