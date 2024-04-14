@@ -87,7 +87,7 @@ For example, this button here has a on press function that navigates to another 
 <br>
 
 However, there is no way to go back to homepage from user page. To solve this problem, a file called _layout.jsx was created. Inside this file, we can make use of Stack layout and Stack.screen from expo router, which wraps the native stack navigator from react navigation. Stack will create a back button for users to navigate back to main page (in this case is to navigate back to index.jsx)
-•	<Stack.Screen name={routeName} /> component will statically configure screen options. [3]. Please make sure routeName matches the file name
+•	<Stack.Screen name={routeName} /> component will statically configure screen options. Make sure routeName matches the file name
 •	You can also set the styling of the header here like this: 
 <br>
 ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/f43edfe6-c0ce-468d-9ad2-08a9d7f894e2)
@@ -116,7 +116,7 @@ Dynamic routing is denoted by square brackets, allowing navigation using paramet
 
 - **View**: Container for elements, similar to a `div`.<br> ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/42f4b8b4-d07c-474b-895d-2afcba86a722)
 
-- **Text**: In react native, text must be put inside a text component. Unlike React where there are several different types of text components like <p> or <h1>, there is only one Text component in react native that you can resize using styling 
+- **Text**: In react native, text must be put inside a text component. Unlike React where there are several different types of text components like `<p>` or `<h1>`, there is only one Text component in react native that you can resize using styling 
 - **Image**:An image is a component used to display an image. the image displayed is defined in the “source” prop of the component, it can be passed an imported image directly <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/66a543f0-ab15-4da3-9626-045377de0f4b) <br>
 Or it can be passed a link to an image using `{uri: imagelink}`. However if you choose to use uri, please note that the height and width of the image must be set otherwise the image will not be displayed. <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/44e856c7-7109-4adf-adb6-be8e294703f8)
 
