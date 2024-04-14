@@ -66,7 +66,8 @@ To run and test your app, you'll need to set up virtual devices:
 1.	Download [Android Studios](https://developer.android.com/studio)
 2.	Install Android Studio and click more actions <br> ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/544ad41f-2801-4030-85e2-ff0870850422)
 
-3.	Click Virtual device manager 
+3.	Click Virtual device manager <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/d605c201-36bf-4f51-85c3-0ac27cd28b08)
+<br>
 4.	Click the Plus in the corner <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/202b5c04-a154-49e1-8843-25b512d56cc3)
 
 5.	Choose Pixel 8 pro and click next <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/68259854-6002-40cb-9e2f-34561f9a006f)
