@@ -31,6 +31,37 @@ To run and test your app, you'll need to set up virtual devices:
 - For macOS: Install Xcode.
 - For Android: Install Android Studio.
 
+### Installing Xcode for IOS simulator
+
+#### Install Xcode to run IOS simulator for Mac users
+1. Check if Xcode is installed on your Mac:
+- You can do so either by searching through the **Applications** directory in the Finder window or by searching for it using Spotlight Search. Use `Command` + `Spacebar` for a shortcut on pulling up the Spotlight Search. If it’s installed, you will find the icon app inside **Applications** and its version number.
+2. If Xcode is not installed on your Mac:
+- Simply open App Store on your Mac, search for Xcode and install the app.
+<p align='center'>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/4664a0fd-06ef-4e9f-8615-7b7ca110e7e2)
+</p>
+
+3. Launching Xcode:
+- The following popup will show on first launch, please make sure you click ‘Install’ to set up additional components that Xcode requires to support running and debugging apps.
+<p align='center'>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/b57d3550-dbb5-4ba2-b898-ae1df94ab6ba)
+
+</p>
+
+- Enter your Mac password to enable installation
+<p align='center'>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/c1a0d9c1-dd5f-4104-aa1a-13b80c1a3488)
+
+</p>
+- The installation will takes time to set up. After installation is done, this dialog will pop up when you open Xcode
+<p align='center'>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/cf0ae5bd-7a23-45a0-b1cc-b0e23bac4bcc)
+
+</p>
+
+- For references on how to install Xcode on Mac, visit this [source](https://www.codecademy.com/article/installing-and-setting-up-xcode)
+
 ### Installing Android Virtual Machine
 1.	Download [Android Studios](https://developer.android.com/studio)
 2.	Install Android Studio and click more actions <br> ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/544ad41f-2801-4030-85e2-ff0870850422)
