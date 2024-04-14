@@ -52,8 +52,8 @@ To run and test your app, you'll need to set up virtual devices:
 1. Clone the repository into your local environment.
 2. Open the folder in VSCode.
 3. Run `npm install` in the terminal to install dependencies.
-4. Start an Android virtual device or an iOS device (Android is recommended).
-5. Run `npm run android` with the virtual device open to start the app.
+4. Start an Android virtual device or an iOS device (Android is recommended) using the steps above.
+5. Run `npm run android` with the virtual device open to start the app if using android or `npm run ios` if using IOS
 
 ## Testing the Application on a Phone
 
@@ -67,6 +67,38 @@ To test the application on your phone:
 4. Scan the QR code using Expo Go (Android) or the Camera app (iOS).
 
 ## Expo Routing Introduction
+
+As we have created this app with expo, we can take advantage of one of expos features, expo routing. This simplified the routing of the application as Expo router is a file based routing system. This means that you can navigate to other pages by importing router from expo router 
+<br> 
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/1028f198-9b89-42b2-895d-ea8816134516)
+<br>
+
+
+Then calling `router.push()`, and then giving the relative file path to navigate to that page. This simplifies routing by a lot.
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/5f76bd1a-047d-4a92-a7cb-7b7e8cb2b568)
+<br>
+
+Another feature of expo routing is dynamic routing. This is denoted by the Square brackets. This allows you to navigate to that file by using parameters which can be retrieved by the useLocalSearchParams hook from expo router to retrieve the file parameter. 
+
+For example, this button here has a on press function that navigates to another page.
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/c6487f7c-a04b-4b0e-8f89-85be05779e6d)
+<br>
+
+However, there is no way to go back to homepage from user page. To solve this problem, a file called _layout.jsx was created. Inside this file, we can make use of Stack layout and Stack.screen from expo router, which wraps the native stack navigator from react navigation. Stack will create a back button for users to navigate back to main page (in this case is to navigate back to index.jsx)
+•	<Stack.Screen name={routeName} /> component will statically configure screen options. [3]. Please make sure routeName matches the file name
+•	You can also set the styling of the header here like this: 
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/f43edfe6-c0ce-468d-9ad2-08a9d7f894e2)
+<br>
+
+Another thing you can do with _layout is create a tab layout. This is done by creating a _layout file for the folder which contains the files that you want within the tab structure, and writing the tab layout in the _layout file. 
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/d66bbca5-92af-4814-8fee-938db9075bf2)
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/48cfb0f4-ef62-4f6d-b0a5-1fe5cb499d5d)
+<br>
 
 Expo simplifies routing with its file-based routing system. You can navigate to other pages by importing `router` from Expo router and calling `router.push()` with the relative file path.
 
