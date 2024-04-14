@@ -103,17 +103,34 @@ Another thing you can do with _layout is create a tab layout. This is done by cr
 Expo simplifies routing with its file-based routing system. You can navigate to other pages by importing `router` from Expo router and calling `router.push()` with the relative file path.
 
 Dynamic routing is denoted by square brackets, allowing navigation using parameters retrieved by the `useLocalSearchParams` hook.
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/f2af7c05-3a75-4bc2-a36d-c688f3761c9d)
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/f3ebf519-5f1e-4c2b-b009-fef0ae5a0929)
+
+
 
 ## React Native Basics
 
 ### Components
 
-- **View**: Container for elements, similar to a `div`.
-- **Text**: Must enclose text, unlike React where various text components are available.
-- **Image**: Displays an image, defined in the `source` prop.
-- **ScrollView**: Container allowing scrolling of overflowed elements.
-- **FlatList**: Renders a list efficiently, rendering only items currently on screen.
-- **TouchableOpacity**: Container with an `onPress` prop, executing a function when pressed.
+- **View**: Container for elements, similar to a `div`.<br> ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/42f4b8b4-d07c-474b-895d-2afcba86a722)
+
+- **Text**: In react native, text must be put inside a text component. Unlike React where there are several different types of text components like <p> or <h1>, there is only one Text component in react native that you can resize using styling 
+- **Image**:An image is a component used to display an image. the image displayed is defined in the “source” prop of the component, it can be passed an imported image directly <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/66a543f0-ab15-4da3-9626-045377de0f4b) <br>
+Or it can be passed a link to an image using `{uri: imagelink}`. However if you choose to use uri, please note that the height and width of the image must be set otherwise the image will not be displayed. <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/44e856c7-7109-4adf-adb6-be8e294703f8)
+
+- **ScrollView**: A scroll view is the same as a view, in that it is a container for child elements, however, scrollview allows the user to scroll elements when it overflows. The scroll direction can be set to vertical or horizontal. A scroll list loads all its elements at once and maybe have performance issues when using more elements. 
+
+- **FlatList**: Flatlist is similar to a scrollview in that it allows the user to scroll its elements. However, unlike a ScrollView, you pass the flatlist an array of data in the data prop, you want to display inside the RenderItem prop. FlatList is more performant than a scroll view as it only renders items that are only the screen. <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/d3f4fd29-58ef-4d66-80e8-858fa30b27ed)
+
+- **TouchableOpacity**: TouchableOpacity is a container for items similar to a View, however it has a `onPress` prop that runs the function that you give it if anything within that element is pressed.
+for example
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/ae53d633-cd58-464d-8bf5-5885ee4a32b6)<br>
+
+
+in this code the `onPress` is given a `router.push` function, so when you click anywhere within the touchable opacity it navigates to the page
 
 ### Hooks
 
@@ -125,11 +142,22 @@ Dynamic routing is denoted by square brackets, allowing navigation using paramet
 
 ### Index Page
 
-Entry page with buttons navigating to different parts of the app: game list, meme generator, and site map.
+This is the entry page for the app. In this page there are 3 buttons, each navigating to different parts of the app. The first button brings you to the list of games. The second button brings you to the meme generator. And the last button brings you to the site map. All these buttons are given a onPress prop with a function that navigates to their respective pages <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/d5f84383-a26f-4c41-8f94-c4ad904b7f27)
+
 
 ### List Page
 
-Displays games on sale from the Steam API. Includes search functionality and price range filters.
+When you click on the first button it navigates you to the list page. This page contains a list of games on sale on steam from the API call here: 
+<br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/dbb26917-5e7a-41e0-a18d-a2640f5865dd)<br>
+
+This information is then mapped onto the elements you see here via a map function. The information is put inside a touchable opacity component and give a onpress function that navigates to the [id] page and gives it the param of the game id. 
+<br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/bc9ed526-2574-4ddc-9761-6e1dfa089b70)<br>
+
+This page also has a search function, which sets the title state using an onchange prop
+Theres also a price range that works in a similar way 
+When you press enter or click search, it sets the state to loading and queries the API again to get the games list
+When you click on the touchable opacity, it navigates to the game information page..
+
 
 ### Game Information Page
 
