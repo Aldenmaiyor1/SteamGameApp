@@ -18,6 +18,9 @@ To create a React Native application using Expo, follow these steps:
    <br>
 
 ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/7b31ae1d-4fca-4c16-a098-fefd8f1720f4)
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/25ea7d24-0b90-4ac2-8261-746600862cec)
+
 
 4. Start your app using the provided commands.
 
@@ -27,6 +30,22 @@ To run and test your app, you'll need to set up virtual devices:
 
 - For macOS: Install Xcode.
 - For Android: Install Android Studio.
+
+### Installing Android Virtual Machine
+1.	Download [Android Studios](https://developer.android.com/studio)
+2.	Install Android Studio and click more actions <br> ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/544ad41f-2801-4030-85e2-ff0870850422)
+
+3.	Click Virtual device manager 
+4.	Click the Plus in the corner <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/202b5c04-a154-49e1-8843-25b512d56cc3)
+
+5.	Choose Pixel 8 pro and click next <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/68259854-6002-40cb-9e2f-34561f9a006f)
+
+6.	Choose and install TiramisuPrivacySandbox for the phone OS then click next  <br> ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/a1f3a52e-4879-4869-a40f-206f4177372f)
+
+7.	Click finish 
+8.	Click the play button to start the android virtual device <br> ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/86876234-dc29-4f4f-b897-3c3aff1f38ee)
+
+
 
 ### Running the App
 
