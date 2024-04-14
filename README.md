@@ -153,15 +153,28 @@ When you click on the first button it navigates you to the list page. This page 
 This information is then mapped onto the elements you see here via a map function. The information is put inside a touchable opacity component and give a onpress function that navigates to the [id] page and gives it the param of the game id. 
 <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/bc9ed526-2574-4ddc-9761-6e1dfa089b70)<br>
 
-This page also has a search function, which sets the title state using an onchange prop
-Theres also a price range that works in a similar way 
-When you press enter or click search, it sets the state to loading and queries the API again to get the games list
-When you click on the touchable opacity, it navigates to the game information page..
+This page also has a search function, which sets the title state using an onchange prop on a `textinput` component <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/f761f4b3-58f5-47d6-8fd0-1553f41cd1e6)<br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/9caf1b59-64b5-467a-af9d-12c4137b17cf) <br> 
 
+
+Theres also a price range setter that works in a similar way that is shown when filter is clicked <br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/cdd80e42-5930-40ed-aab8-8fe0c0421b6d)
+<br>
+ 
+When you press enter or click search, it sets the state to loading and queries the API again to get the games list
+When you click on the touchable opacity, it navigates to the game information page.
+<br>
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/1f83d227-12ec-41a6-964c-01f321acca8d)
+<br>
 
 ### Game Information Page
 
-Displays information about a specific game obtained from the Steam API, including screenshots and Metacritic details.
+The game information page contains information about the game. It gets this information by getting the steam ID which is the params via the useLocalSearch params hook
+<br> ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/ffa2ae2f-f8b1-4f0d-a28b-98d2f0a084ec)
+<br>
+And then uses it to call a Steam API to get screenshots, information, and metacritic details about the game. 
+<br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/216769d7-8e27-4dcd-a67a-f3a74e668177)<br>
+
+The screenshots are displayed using a flatList which is given the render item, the flatlist has a snapping function set to snap to the screen width
+<br>![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/4db2292a-1328-4701-9051-d65435b792ef)
 
 ### Meme Generator Page
 
