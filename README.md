@@ -10,10 +10,16 @@ This demonstration will focus on creating a Steam game discount finder app for a
 To create a React Native application using Expo, follow these steps:
 
 1. Run the following command:
+   <br>
+   
 ![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/bc75b8ed-b7bd-4363-9ce4-af8336d63157)
 
-2. 2. Choose a template and name for your app.
-3. Start your app using the provided commands.
+2. Choose a template and name for your app.
+   <br>
+
+![image](https://github.com/UOA-CS732-SE750-Students-2024/cs732-assignment-Aldenmaiyor1/assets/140029118/7b31ae1d-4fca-4c16-a098-fefd8f1720f4)
+
+4. Start your app using the provided commands.
 
 ### Installing Simulators
 
